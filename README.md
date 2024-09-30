@@ -3,13 +3,14 @@
 This project demonstrates how to create a serverless API with multiple paths using AWS Serverless Application Model (SAM) and a single Lambda function.
 
 ## Project Structure
+```
 .
-├── src/
-│ └── app.js
-├── template.yaml
-├── samconfig.toml
-└── README.md
-
+├─ src/
+│ └─ app.js
+├─ template.yaml
+├─ samconfig.toml
+└─ README.md
+```
 
 - **`src/app.js`**: Contains the Lambda function code.
 - **`template.yaml`**: SAM template defining the application's AWS resources.
