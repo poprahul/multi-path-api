@@ -18,9 +18,9 @@ This project demonstrates how to create a serverless API with multiple paths usi
 
 ## Prerequisites
 
-- AWS CLI configured with appropriate credentials.
-- AWS SAM CLI installed.
-- Node.js 20.x installed.
+- [AWS CLI configured with appropriate credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
+- [AWS SAM CLI installed](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
+- [Node.js 20.x installed](https://nodejs.org/)
 
 ## Setup and Deployment
 
