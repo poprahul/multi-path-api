@@ -1,0 +1,32 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Multi-path API with single Lambda function using Node.js 20
+
+Resources:
+  MultiPathFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: app.handler
+      Runtime: nodejs20.x
+      Events:
+        Path1Get:
+          Type: HttpApi
+          Properties:
+            Path: /path1
+            Method: GET
+        Path2Post:
+          Type: HttpApi
+          Properties:
+            Path: /path2
+            Method: POST
+        Path3Put:
+          Type: HttpApi
+          Properties:
+            Path: /path3
+            Method: PUT
+
+Outputs:
+  ApiUrl:
+    Description: URL of the HTTP API
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com"
